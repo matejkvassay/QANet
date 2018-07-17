@@ -30,17 +30,18 @@
         </style>
     </head>
     <body>
-        <textarea id='passage' placeholder='Your passage here'></textarea>
-        <textarea id='question' placeholder='Your Question here'></textarea>
+        <textarea id='passage' placeholder='Your passage here' maxlength="5000"></textarea>
+        <textarea id='question' placeholder='Your Question here' maxlength="150"></textarea>
         <p id='answer'>Your answer appears here</p>
         <button id='GetAnswer'>Get Answer</button>
         <script>
             var button = document.getElementById("GetAnswer");
             button.onclick = function (){
                 var para = document.getElementById("passage");
+                var paraText = para.value;//.substring(0, Math.min(para.value.length, 999));
                 var ques = document.getElementById("question");
                 console.log("hitting");
-                hit(para.value, ques.value);
+                hit(paraText, ques.value);
 
             };
         </script>
