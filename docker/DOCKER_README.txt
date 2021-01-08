@@ -1,6 +1,5 @@
 BUILD DOCKER IMAGE:
 cd <QAnet project folder>/docker/
-./prepare.sh
 docker build -t qanet_demo -f ./Dockerfile .
 
 RUN DOCKER DEMO SERVER:
